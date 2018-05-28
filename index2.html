@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Go</title>
+    <script type="text/javascript" src="go.js"></script>
+  <style type="text/css">
+		#haha{
+			padding-left: 20%;
+			padding-top:20px;
+			padding-bottom:20px;
+		}
+		#GoBoard{
+			background-color:#c6a300;
+			cursor: url("cursor/black.png") 15 15, crosshair;
+		}
+	</style>
+	</head>
+	<body onload="prepare()">
+
+<div id="haha">
+	<h4 id="whosTurn">black's turn</h4>
+  	<canvas  id="GoBoard" onmousedown="play(event)" height="604"width="604"
+		 style="cursor: url('cursor/black.png') 15 15, crosshair" >
+  		这里不支持HTML5，换个浏览器试试。。
+  	</canvas>
+	<br>
+  	<input type="button" onclick="undo()" value="手误" id="undo">
+	<input type="button" onclick="">
+	<br>
+  	<input type="button" onclick="study()" value="研究" id="study">
+  	<input type="button" onclick="set_Bw(1)" value="黑" id="black">
+  	<input type="button" onclick="set_Bw(2)" value="白" id="white">
+  	<input type="button" onclick="goAhead()" id="goahead" value="交替继续">
+</div>
+  </body>
+</html>
